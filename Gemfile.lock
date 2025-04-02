@@ -70,10 +70,10 @@ PLATFORMS
 
 DEPENDENCIES
   ioprio!
-  rake (~> 13.0)
+  rake
   rake-compiler
-  rspec (~> 3.0)
-  rubocop (~> 1.21)
+  rspec
+  rubocop
   rubocop-performance
   rubocop-rake
   rubocop-rspec
