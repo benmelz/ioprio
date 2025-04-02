@@ -5,6 +5,22 @@ require "ioprio"
 RSpec.describe Process do
   include ProcessHelpers
 
+  it "defines a none class constant" do
+    expect(described_class::IOPRIO_CLASS_NONE).to eq(0)
+  end
+
+  it "defines a realtime class constant" do
+    expect(described_class::IOPRIO_CLASS_RT).to eq(1)
+  end
+
+  it "defines a best effort class constant" do
+    expect(described_class::IOPRIO_CLASS_BE).to eq(2)
+  end
+
+  it "defines an idle class constant" do
+    expect(described_class::IOPRIO_CLASS_IDLE).to eq(3)
+  end
+
   it "defines a who process constant" do
     expect(described_class::IOPRIO_WHO_PROCESS).to eq(1)
   end
