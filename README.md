@@ -18,9 +18,11 @@ gem install ioprio
 
 ## Usage
 
-The ioprio syscalls are only supported by linux systems and as such the following API methods will only be implemented when running on them.
+The ioprio syscalls are only supported by linux systems and as such the following API methods will only be implemented
+when running on them.
 
-All behavior is delegated directly to the syscalls themselves. Refer to the linux syscall man pages for usage instructions.
+All behavior is delegated directly to the syscalls themselves. Refer to the man pages for usage
+instructions.
 
 Wrapper methods and constants for which values are defined on the `Process` module:
 
@@ -29,15 +31,16 @@ Wrapper methods and constants for which values are defined on the `Process` modu
   Process::IOPRIO_WHO_PGRP
   Process::IOPRIO_WHO_USER
 
-  Process.getiopriority(which, who)
-  Process.setiopriority(which, who, priority)
+  Process.ioprio_get(which, who)
+  Process.ioprio_set(which, who, priority)
 ```
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+* Run `bin/setup` to install dependencies.
+* Run `bin/rake spec` to run the tests.
+* Run `bin/rake rubocop` to run the linter.
+* Run `bin/console` for an interactive prompt that will allow you to experiment.
 
 ## Contributing
 
