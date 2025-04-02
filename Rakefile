@@ -14,10 +14,13 @@ require "rake/extensiontask"
 desc ""
 task build: :compile
 
+desc ""
+task spec: :build
+
 GEMSPEC = Gem::Specification.load("ioprio.gemspec")
 
 Rake::ExtensionTask.new("ioprio", GEMSPEC) do |ext|
   ext.lib_dir = "lib/ioprio"
 end
 
-task default: %i[clobber compile spec rubocop]
+task default: %i[clobber rubocop spec]

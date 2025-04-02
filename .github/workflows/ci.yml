@@ -1,0 +1,31 @@
+name: ci
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+jobs:
+  rspec:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby-version:
+          - 3.2
+          - 3.3
+          - 3.4
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby-version }}
+      - run: bin/setup
+      - run: bin/rake spec
+  rubocop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2
+      - run: bin/setup
+      - run: bin/rake rubocop
