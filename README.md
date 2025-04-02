@@ -18,9 +18,11 @@ gem install ioprio
 
 ## Usage
 
-The ioprio syscalls are only supported by linux systems and as such the following API methods will only be implemented when running on them.
+The ioprio syscalls are only supported by linux systems and as such the following API methods will only be implemented
+when running on them.
 
-All behavior is delegated directly to the syscalls themselves. Refer to the linux syscall man pages for usage instructions.
+All behavior is delegated directly to the syscalls themselves. Refer to the man pages for usage
+instructions.
 
 Wrapper methods and constants for which values are defined on the `Process` module:
 
@@ -29,8 +31,8 @@ Wrapper methods and constants for which values are defined on the `Process` modu
   Process::IOPRIO_WHO_PGRP
   Process::IOPRIO_WHO_USER
 
-  Process.getiopriority(which, who)
-  Process.setiopriority(which, who, priority)
+  Process.ioprio_get(which, who)
+  Process.ioprio_set(which, who, priority)
 ```
 
 ## Development
