@@ -8,6 +8,7 @@ AllCops:
     - bin/rake
     - bin/rspec
     - bin/rubocop
+    - tmp/**/*
   NewCops: enable
   TargetRubyVersion: 3.2
 Style/StringLiterals:

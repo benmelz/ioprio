@@ -3,7 +3,6 @@
 require_relative "ioprio/version"
 require_relative "ioprio/ioprio"
 
+# :nodoc:
 module Ioprio
-  class Error < StandardError; end
-  # Your code goes here...
 end
