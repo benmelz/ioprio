@@ -11,6 +11,7 @@ RuboCop::RakeTask.new
 
 require "rake/extensiontask"
 
+desc ""
 task build: :compile
 
 GEMSPEC = Gem::Specification.load("ioprio.gemspec")
