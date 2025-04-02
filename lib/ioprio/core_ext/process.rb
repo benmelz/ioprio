@@ -20,6 +20,12 @@ module Ioprio
       end
 
       module ClassMethods
+        def ioprio_prio_class(priority); end
+
+        def ioprio_prio_data(priority); end
+
+        def ioprio_prio_value(klass, data); end
+
         def ioprio_get(which, who); end
 
         def ioprio_set(which, who, priority); end

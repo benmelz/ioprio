@@ -36,6 +36,10 @@ Constants, macros and wrappers are defined on the `Process` module:
   Process::IOPRIO_WHO_PGRP
   Process::IOPRIO_WHO_USER
 
+  Process.ioprio_prio_class(priority)
+  Process.ioprio_prio_data(priority)
+  Process.ioprio_prio_value(klass, data)
+
   Process.ioprio_get(which, who)
   Process.ioprio_set(which, who, priority)
 ```
