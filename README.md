@@ -1,6 +1,6 @@
 # ioprio
 
-Simple wrappers and helpers for linux ioprio syscalls.
+A simple ruby API for the linux ioprio system.
 
 ## Installation
 
@@ -18,14 +18,11 @@ gem install ioprio
 
 ## Usage
 
-The ioprio syscalls are only supported by linux systems. As such their wrappers (`ioprio_get`/`ioprio_set`) will only
-be implemented when built and run on a linux system.
+The ioprio syscalls are only supported by linux systems. As such their wrappers (`ioprio_get`/`ioprio_set`) will only be implemented when built and run on a linux system.
 
-All behaviors are either delegated to or are a recreation of the native ioprio systems. Refer to the man pages
-for usage instructions.
+All features either directly call or are a recreation of native ioprio system features. Refer to the linux man pages for usage instructions.
 
-In ruby, the following constants and methods are defined on the `Process` module, which correspond to native
-macros and syscalls:
+In ruby, the following constants and methods are defined on the `Process` module, corresponding to their native macros and syscalls:
 
 ```ruby
   Process::IOPRIO_CLASS_NONE
