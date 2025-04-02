@@ -6,6 +6,7 @@ gemspec
 
 gem "rake"
 gem "rake-compiler"
+gem "rdoc"
 gem "rspec"
 gem "rubocop"
 gem "rubocop-performance"
