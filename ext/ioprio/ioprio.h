@@ -3,4 +3,4 @@
 
 #include "ruby.h"
 
-#endif /* IOPRIO_H */
+#endif
