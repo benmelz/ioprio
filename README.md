@@ -18,8 +18,8 @@ gem install ioprio
 
 ## Usage
 
-The ioprio syscalls are only supported by linux systems and as such their wrappers will only be implemented
-when built and run on a linux system.
+The ioprio syscalls are only supported by linux systems. As such their wrappers (`ioprio_get`/`ioprio_set`) will only
+be implemented when built and run on a linux system.
 
 All behaviors are either delegated to or are a recreation of the native ioprio systems. Refer to the man pages
 for usage instructions.
