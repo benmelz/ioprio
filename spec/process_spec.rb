@@ -68,7 +68,6 @@ RSpec.describe Process do
       end
 
       it "encodes at the upper bound of the #{class_name} class" do
-        priority = (value << 13) + 2.pow(13) - 1
         expect(described_class.ioprio_prio_value(value, 2.pow(13) - 1)).to eq((value << 13) + 2.pow(13) - 1)
       end
     end
