@@ -24,9 +24,14 @@ when running on them.
 All behavior is delegated directly to the syscalls themselves. Refer to the man pages for usage
 instructions.
 
-Wrapper methods and constants for which values are defined on the `Process` module:
+Constants, macros and wrappers are defined on the `Process` module:
 
 ```ruby
+  Process::IOPRIO_CLASS_NONE
+  Process::IOPRIO_CLASS_RT
+  Process::IOPRIO_CLASS_BE
+  Process::IOPRIO_CLASS_IDLE
+
   Process::IOPRIO_WHO_PROCESS
   Process::IOPRIO_WHO_PGRP
   Process::IOPRIO_WHO_USER

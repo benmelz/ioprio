@@ -5,6 +5,11 @@ module Ioprio
     module Process
       # actual values are initialized in C extension
       # rubocop:disable Lint/LiteralAsCondition
+      IOPRIO_CLASS_NONE = _ if false
+      IOPRIO_CLASS_RT = _ if false
+      IOPRIO_CLASS_BE = _ if false
+      IOPRIO_CLASS_IDLE = _ if false
+
       IOPRIO_WHO_PROCESS = _ if false
       IOPRIO_WHO_PGRP = _ if false
       IOPRIO_WHO_USER = _ if false
