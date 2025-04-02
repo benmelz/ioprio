@@ -6,6 +6,14 @@
 
 enum
 {
+  IOPRIO_CLASS_NONE,
+  IOPRIO_CLASS_RT,
+  IOPRIO_CLASS_BE,
+  IOPRIO_CLASS_IDLE,
+};
+
+enum
+{
   IOPRIO_WHO_PROCESS = 1,
   IOPRIO_WHO_PGRP,
   IOPRIO_WHO_USER,
@@ -49,6 +57,15 @@ Init_ioprio (void)
       = rb_define_module_under (rb_mod_ioprio_core_ext, "Process");
   VALUE rb_mod_ioprio_core_ext_process_class_methods = rb_define_module_under (
       rb_mod_ioprio_core_ext_process, "ClassMethods");
+
+  rb_define_const (rb_mod_ioprio_core_ext_process, "IOPRIO_CLASS_NONE",
+                   INT2NUM (IOPRIO_CLASS_NONE));
+  rb_define_const (rb_mod_ioprio_core_ext_process, "IOPRIO_CLASS_RT",
+                   INT2NUM (IOPRIO_CLASS_RT));
+  rb_define_const (rb_mod_ioprio_core_ext_process, "IOPRIO_CLASS_BE",
+                   INT2NUM (IOPRIO_CLASS_BE));
+  rb_define_const (rb_mod_ioprio_core_ext_process, "IOPRIO_CLASS_IDLE",
+                   INT2NUM (IOPRIO_CLASS_IDLE));
 
   rb_define_const (rb_mod_ioprio_core_ext_process, "IOPRIO_WHO_PROCESS",
                    INT2NUM (IOPRIO_WHO_PROCESS));
