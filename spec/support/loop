@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+kill -SIGUSR1 $PPID
+
+while true
+do
+  :
+done
