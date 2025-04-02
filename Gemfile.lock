@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ioprio (0.1.0)
+    ioprio (1.0.0)
 
 GEM
   remote: https://rubygems.org/
