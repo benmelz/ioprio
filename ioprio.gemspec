@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
   spec.metadata["source_code_uri"] = spec.homepage
   spec.metadata["changelog_uri"] = "#{spec.homepage}/blob/v#{Ioprio::VERSION}/CHANGELOG.md"
 
-  spec.files = Dir["lib/**/*", "CHANGELOG.md", "LICENSE.md", "README.md"]
+  spec.files = Dir["lib/**/*.rb", "ext/**/*", "sig/**/*", "CHANGELOG.md", "LICENSE.md", "README.md"]
   spec.require_paths = ["lib"]
   spec.extensions = ["ext/ioprio/extconf.rb"]
   spec.metadata["rubygems_mfa_required"] = "true"
