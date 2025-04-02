@@ -19,6 +19,24 @@ enum
   IOPRIO_WHO_USER,
 };
 
+static VALUE
+ioprio_prio_class (VALUE obj, VALUE priority)
+{
+  return INT2NUM (NUM2INT (priority) >> 13);
+}
+
+static VALUE
+ioprio_prio_data (VALUE obj, VALUE priority)
+{
+  return INT2NUM (NUM2INT (priority) & ((1UL << 13) - 1));
+}
+
+static VALUE
+ioprio_prio_value (VALUE obj, VALUE class, VALUE data)
+{
+  return INT2NUM ((NUM2INT (class) << 13) | NUM2INT (data));
+}
+
 #ifdef SYS_ioprio_get
 static VALUE
 ioprio_get (VALUE obj, VALUE which, VALUE who)
@@ -74,6 +92,12 @@ Init_ioprio (void)
   rb_define_const (rb_mod_ioprio_core_ext_process, "IOPRIO_WHO_USER",
                    INT2NUM (IOPRIO_WHO_USER));
 
+  rb_define_method (rb_mod_ioprio_core_ext_process_class_methods, "ioprio_prio_class",
+                    ioprio_prio_class, 1);
+  rb_define_method (rb_mod_ioprio_core_ext_process_class_methods, "ioprio_prio_data",
+                    ioprio_prio_data, 1);
+  rb_define_method (rb_mod_ioprio_core_ext_process_class_methods, "ioprio_prio_value",
+                    ioprio_prio_value, 2);
   rb_define_method (rb_mod_ioprio_core_ext_process_class_methods, "ioprio_get",
                     ioprio_get, 2);
   rb_define_method (rb_mod_ioprio_core_ext_process_class_methods, "ioprio_set",
