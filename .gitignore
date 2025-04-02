@@ -1,0 +1,6 @@
+/.rspec_status
+/coverage/
+/lib/ioprio/ioprio.bundle
+/lib/ioprio/ioprio.so
+/pkg/
+/tmp/
