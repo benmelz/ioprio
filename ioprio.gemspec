@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email = ["ben@melz.me"]
 
   spec.summary = "A simple ruby API for the linux ioprio system."
-  spec.homepage = "https://github.com/benmelz/io_priority"
+  spec.homepage = "https://github.com/benmelz/ioprio"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.2.0"
 
