@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/benmelz/ioprio/compare/v1.1.0...v1.1.1) (2025-04-08)
+
+
+### Bug Fixes
+
+* link to homepage and other pages correctly ([#11](https://github.com/benmelz/ioprio/issues/11)) ([91029c5](https://github.com/benmelz/ioprio/commit/91029c5ef52b9bf4e425c2bf1899124660a379db))
+
 # [1.1.0](https://github.com/benmelz/ioprio/compare/v1.0.0...v1.1.0) (2025-04-02)
 
 
