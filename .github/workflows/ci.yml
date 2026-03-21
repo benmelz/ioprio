@@ -27,6 +27,6 @@ jobs:
       - uses: actions/checkout@v3
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.2
+          ruby-version: ruby
       - run: bin/setup
       - run: bin/rake rubocop
