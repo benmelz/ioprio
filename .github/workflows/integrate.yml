@@ -1,4 +1,4 @@
-name: ci
+name: integrate
 on:
   push:
     branches:
@@ -15,7 +15,7 @@ jobs:
           - 3.4
           - 4.0
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby-version }}
@@ -24,9 +24,10 @@ jobs:
   rubocop:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: ruby
+          bundler_cache: true
       - run: bin/setup
       - run: bin/rake rubocop
