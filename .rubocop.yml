@@ -11,6 +11,8 @@ AllCops:
     - tmp/**/*
   NewCops: enable
   TargetRubyVersion: 3.2
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
 Style/Documentation:
   Enabled: false
 Style/StringLiterals:

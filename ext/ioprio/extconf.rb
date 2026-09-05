@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require "mkmf"
 
 # Makes all symbols private by default to avoid unintended conflict
