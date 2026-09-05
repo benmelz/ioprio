@@ -44,10 +44,10 @@ In ruby, the following constants and methods are defined on the `Process` module
 
 ## Development
 
-* Run `bin/setup` to install dependencies.
-* Run `bin/rake spec` to run the tests.
-* Run `bin/rake rubocop` to run the linter.
-* Run `bin/console` for an interactive prompt that will allow you to experiment.
+- Run `bin/setup` to install dependencies.
+- Run `bin/rake spec` to run the tests.
+- Run `bin/rake rubocop` to run the linter.
+- Run `bin/console` for an interactive prompt that will allow you to experiment.
 
 ## Contributing
 
