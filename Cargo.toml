@@ -1,0 +1,3 @@
+[workspace]
+members = ["./ext/ioprio"]
+resolver = "2"

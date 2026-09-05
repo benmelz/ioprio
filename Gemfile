@@ -4,6 +4,7 @@ gemspec
 
 gem "rake"
 gem "rake-compiler"
+gem "rb_sys"
 gem "rspec"
 gem "rubocop"
 gem "rubocop-performance"
