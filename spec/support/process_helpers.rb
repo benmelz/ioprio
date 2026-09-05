@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module ProcessHelpers
   def loop_script_path = File.expand_path("loop", __dir__)
 

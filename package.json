@@ -1,12 +1,15 @@
 {
   "private": true,
-  "dependencies": {
+  "type": "module",
+  "scripts": {
+    "fmt": "oxfmt",
+    "release": "semantic-release"
+  },
+  "devDependencies": {
     "@semantic-release/changelog": "*",
     "@semantic-release/git": "*",
     "@webhippie/semantic-release-rubygem": "*",
+    "oxfmt": "*",
     "semantic-release": "*"
-  },
-  "scripts": {
-    "release": "semantic-release"
   }
 }
