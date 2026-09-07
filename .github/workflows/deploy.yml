@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: lts/*
       - run: npm ci
-      - run: npm run release
+      - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
           GEM_HOST_API_KEY: ${{ secrets.GEM_HOST_API_KEY }}
