@@ -1,7 +1,11 @@
-/.rspec_status
 /coverage/
-/lib/ioprio/ioprio.bundle
 /node_modules/
 /pkg/
+/registry/
 /target/
 /tmp/
+/vendor/
+/.rspec_status
+
+*.bundle
+*.so
