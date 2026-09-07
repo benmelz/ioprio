@@ -1,3 +1,3 @@
 module Ioprio
-  VERSION = "1.1.1".freeze
+  VERSION = "0.0.0.dev".freeze
 end
