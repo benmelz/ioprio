@@ -1,3 +1,9 @@
+> [!CAUTION]
+> **This changelog is no longer maintained.**
+>
+> Release notes are now provided exclusively with
+> [github releases](https://github.com/benmelz/ioprio/releases).
+
 ## [1.1.1](https://github.com/benmelz/ioprio/compare/v1.1.0...v1.1.1) (2025-04-08)
 
 
