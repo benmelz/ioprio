@@ -9,6 +9,7 @@ AllCops:
     - bin/rspec
     - bin/rubocop
     - tmp/**/*
+    - vendor/**/*
   NewCops: enable
   TargetRubyVersion: 3.2
 Style/FrozenStringLiteralComment:
