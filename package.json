@@ -6,9 +6,6 @@
     "release": "semantic-release"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "*",
-    "@semantic-release/git": "*",
-    "@webhippie/semantic-release-rubygem": "*",
     "oxfmt": "*",
     "semantic-release": "*"
   }
