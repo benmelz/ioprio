@@ -14,7 +14,6 @@ jobs:
           ruby-version: 3.3
           bundler-cache: true
       - run: bin/rake build
-      - run: bin/rake build:native
   clippy:
     runs-on: ubuntu-latest
     steps:

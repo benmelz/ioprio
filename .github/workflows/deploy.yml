@@ -16,13 +16,13 @@ jobs:
           token: ${{ steps.generate-token.outputs.token }}
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: ruby
+          ruby-version: 3.3
           bundler_cache: true
       - uses: actions/setup-node@v7
         with:
           node-version: lts/*
       - run: npm ci
-      - run: npm run release
+      - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
           GEM_HOST_API_KEY: ${{ secrets.GEM_HOST_API_KEY }}
