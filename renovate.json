@@ -1,4 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["local>benmelz/renovate-config"]
+  "extends": ["local>benmelz/renovate-config"],
+  "packageRules": [
+    {
+      "matchDepNames": ["ruby"],
+      "dependencyDashboardApproval": true
+    }
+  ]
 }
