@@ -15,16 +15,11 @@ jobs:
           bundler-cache: true
       - run: bin/rake build
       - run: bin/rake build:native
-  cargo-clippy:
+  clippy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
       - run: cargo clippy
-  cargo-fmt:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v7
-      - run: cargo fmt --check
   oxfmt:
     runs-on: ubuntu-latest
     steps:
@@ -60,3 +55,8 @@ jobs:
           bundler-cache: true
       - run: bin/setup
       - run: bin/rake rubocop
+  rustfmt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - run: cargo fmt --check
